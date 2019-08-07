@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/OpenGL/Sources/Kore/ShaderStorageBufferImpl.cpp \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/OpenGL/Sources/Kore/pch.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/Kore/pch.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/OpenGL/Sources/Kore/ogl.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/log.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/pch.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/../Kore/pch.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/compute/compute.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/OpenGL/Sources/Kore/ComputeImpl.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/OpenGL/Sources/Kore/ShaderStorageBufferImpl.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/Kore/Graphics4/VertexStructure.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics4/graphics.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/math/matrix.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics4/constantlocation.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/OpenGL/Sources/Kore/PipelineStateImpl.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/OpenGL/Sources/Kore/ShaderImpl.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics4/textureunit.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/OpenGL/Sources/Kore/TextureImpl.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics4/vertexstructure.h

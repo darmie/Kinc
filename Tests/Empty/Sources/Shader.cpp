@@ -51,6 +51,8 @@ int kickstart(int argc, char** argv) {
 	pipeline->fragmentShader = fragmentShader;
 	pipeline->compile();
 
+	// Kore::mat4x4::Identity();
+
 	vertices = new Graphics4::VertexBuffer(3, structure);
 	float* v = vertices->lock();
 	v[0] = -1;

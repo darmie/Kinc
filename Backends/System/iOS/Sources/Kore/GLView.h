@@ -38,13 +38,23 @@ struct kinc_g5_render_target;
 
 - (void)begin;
 - (void)end;
+- (void)update;
 - (void)showKeyboard;
 - (void)hideKeyboard;
-#ifdef KORE_METAL
+#ifndef KORE_METAL
 - (id<MTLDevice>)metalDevice;
 - (id<MTLLibrary>)metalLibrary;
 - (id<MTLRenderCommandEncoder>)metalEncoder;
 - (void)newRenderPass:(struct kinc_g5_render_target*)renderTarget wait: (bool)wait;
 #endif
 
+#if defined(KORE_OPENGL) && defined(KORE_AR)
+@property (nonatomic, strong) ARSession *session;
+@property (nonatomic, strong) id<ARSessionDelegate, GLKViewDelegate> AR_Renderer;
+#endif
+
+#if defined(KORE_METAL) && defined(KORE_AR)
+@property (nonatomic, strong) ARSession *session;
+@property (nonatomic, strong) id<ARSessionDelegate, MTKViewDelegate> AR_Renderer;
+#endif
 @end

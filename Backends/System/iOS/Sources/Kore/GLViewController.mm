@@ -64,4 +64,8 @@ id getMetalEncoder() {
 	self.view = glView = [[GLView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 }
 
+- (void)update {
+	[self.view update];
+}
+
 @end

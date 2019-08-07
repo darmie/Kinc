@@ -1,6 +1,7 @@
 #include "pch.h"
 
 #import "GLView.h"
+#import "Ar.h"
 
 #include <kinc/input/acceleration.h>
 #include <kinc/input/keyboard.h>
@@ -75,6 +76,12 @@ extern "C" int kinc_window_height(int window) {
 }
 #endif
 
+-(void)update {
+	#ifdef KORE_AR
+	[self.AR_Renderer update:self.frame.size];
+	#endif
+}
+
 #ifdef KORE_METAL
 void initMetalCompute(id<MTLDevice> device, id<MTLCommandQueue> commandQueue);
 
@@ -84,6 +91,16 @@ void initMetalCompute(id<MTLDevice> device, id<MTLCommandQueue> commandQueue);
 
 	backingWidth = frame.size.width * self.contentScaleFactor;
 	backingHeight = frame.size.height * self.contentScaleFactor;
+
+	#ifdef KORE_AR
+	ARWorldTrackingConfiguration *configuration = [ARWorldTrackingConfiguration new];
+    configuration.planeDetection = ARPlaneDetectionHorizontal;
+    [self.session runWithConfiguration:configuration];
+
+	self.AR_Renderer = [[ARRenderer alloc] initWithSession:self.session];
+
+	self.session.delegate = self.AR_Renderer;
+	#endif
 	
 	initTouches();
 
@@ -126,6 +143,16 @@ void initMetalCompute(id<MTLDevice> device, id<MTLCommandQueue> commandQueue);
 		//[self release];
 		return nil;
 	}
+
+	#ifdef KORE_AR
+	ARWorldTrackingConfiguration *configuration = [ARWorldTrackingConfiguration new];
+    configuration.planeDetection = ARPlaneDetectionHorizontal;
+    [self.session runWithConfiguration:configuration];
+
+	self.AR_Renderer = [[ARRenderer alloc] initWithSession:self.session];
+
+	self.session.delegate = self.AR_Renderer;
+	#endif
 
 	glGenFramebuffersOES(1, &defaultFramebuffer);
 	glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
@@ -308,6 +335,21 @@ void initMetalCompute(id<MTLDevice> device, id<MTLCommandQueue> commandQueue);
 #endif
 
 - (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
+	#ifndef KORE_AR
+	ARFrame *currentFrame = [self.session currentFrame];
+	 // Create anchor using the camera's current position
+    if (currentFrame) {
+        
+        // Create a transform with a translation of 0.2 meters in front of the camera
+        matrix_float4x4 translation = matrix_identity_float4x4;
+        translation.columns[3].z = -0.2;
+        matrix_float4x4 transform = matrix_multiply(currentFrame.camera.transform, translation);
+        
+        // Add a new anchor to the session
+        ARAnchor *anchor = [[ARAnchor alloc] initWithTransform:transform];
+        [self.session addAnchor:anchor];
+    }
+	#endif
 	for (UITouch* touch in touches) {
 		int index = getTouchIndex((__bridge void*)touch);
 		if (index == -1) index = addTouch((__bridge void*)touch);

@@ -1,0 +1,30 @@
+dependencies: \
+  /Users/damilare/Documents/projects/Kinc/Backends/System/macOS/Sources/Kore/Audio.cpp \
+  /Users/damilare/Documents/projects/Kinc/Backends/System/macOS/Sources/Kore/pch.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/Kore/pch.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/audio2/audio.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/log.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/pch.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/../Kore/pch.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/System/Apple/Sources/Kore/VideoSoundStream.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/Kore/Graphics4/Texture.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics4/textureunit.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/G4onG5/Sources/Kore/ShaderImpl.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics5/shader.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics5/texture.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/image.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics5/textureunit.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics5/pch.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics5/../pch.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics5/Metal/Sources/Kore/Texture5Impl.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics5/vertexstructure.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics4/vertexstructure.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/math/matrix.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics5/Metal/Sources/Kore/PipelineState5Impl.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics5/Metal/Sources/Kore/Shader5Impl.h \
+  /Users/damilare/Documents/projects/Kinc/Backends/Graphics4/G4onG5/Sources/Kore/TextureImpl.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/graphics4/texture.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/Kore/Graphics1/Image.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/Kore/IO/FileReader.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/kinc/io/filereader.h \
+  /Users/damilare/Documents/projects/Kinc/Sources/Kore/IO/Reader.h

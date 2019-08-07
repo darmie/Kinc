@@ -4,5 +4,4 @@
 
 @interface KoreAppDelegate : NSObject <UIApplicationDelegate> {
 }
-
 @end
